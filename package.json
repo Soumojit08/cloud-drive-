@@ -1,9 +1,9 @@
 {
   "name": "drive-pro",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "start": "nodemon app.js"
+    "start": "node app.js"
   },
   "keywords": [],
   "author": "Soumojit Banerjee",
