@@ -91,7 +91,7 @@ router.post(
 
     res.cookie("token", token);
 
-    res.send("Login Successful");
+    res.redirect("/home");
   }
 );
 

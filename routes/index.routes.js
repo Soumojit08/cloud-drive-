@@ -26,7 +26,7 @@ router.post(
       user: req.user.userId,
     });
 
-    res.json(newFile);
+    res.redirect("/home");
   }
 );
 
