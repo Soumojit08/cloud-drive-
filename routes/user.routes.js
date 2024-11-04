@@ -13,7 +13,7 @@ router.get("/register", (req, res) => {
 
 router.post(
   "/register",
-  body("email").trim().isEmail().isLength({ min: 13 }),
+  body("email").trim().isEmail().isLength({ min: 10 }),
   body("password").trim().isLength({ min: 5 }),
   body("username").trim().isLength({ min: 3 }),
   async (req, res) => {
@@ -94,6 +94,11 @@ router.post(
     res.redirect("/home");
   }
 );
+
+router.get("/logout", (req, res) => {
+  res.clearCookie("authToken");
+  res.redirect("login");
+});
 
 module.exports = router;
 
